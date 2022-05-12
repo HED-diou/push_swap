@@ -6,7 +6,7 @@
 /*   By: hed-diou <hed-diou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 18:39:21 by hed-diou          #+#    #+#             */
-/*   Updated: 2022/03/09 16:04:07 by hed-diou         ###   ########.fr       */
+/*   Updated: 2022/03/10 18:06:18 by hed-diou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,14 @@
 // 	}
 // 	return (0);
 // }
+int	ft_isdigit(int arg)
+{
+	if (arg >= 48 && arg <= 57)
+	{
+		return (1);
+	}
+	return (0);
+}
 
 static int	checkout(const char *c, int i, int x)
 {

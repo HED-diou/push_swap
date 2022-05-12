@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hed-diou <hed-diou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/21 14:46:43 by hed-diou          #+#    #+#             */
-/*   Updated: 2022/04/01 18:49:04 by hed-diou         ###   ########.fr       */
+/*   Created: 2022/02/23 17:15:23 by hed-diou          #+#    #+#             */
+/*   Updated: 2022/03/10 18:44:10 by hed-diou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sb(t_numm *head, int s)
+void	pb(t_numm **node_b, t_numm **node_a)
 {
-	int		tmp;
+	t_numm	*tmp;
 
-	if (head != NULL && head->next != NULL)
+	tmp = *node_a;
+	if (*node_a)
 	{
-		tmp = head->num;
-		head->num = head->next->num;
-		head->next->num = tmp;
+		*node_a = (*node_a)->next;
+		tmp->next = NULL;
+		ft_lstadd_front(node_b, tmp);
 	}
-	if (s != 0)
-			write(1, "sb\n", 3);
 }
